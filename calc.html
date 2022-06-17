@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title> JavaScript Calculator </title>
+
+<style>
+	.container {
+    border: 1px solid #cccccc;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 400px;
+}
+	
+	.grid {
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    margin:auto;
+
+}
+	
+	
+	.display{
+
+    background-color:rgb(171, 219, 231);
+    justify-content: left;
+    color: black;
+    font-size: medium;
+    width: 40%;
+    height: 30%;
+    cursor: default;
+    padding: 10px; 
+    padding-left: 40%;
+    margin: auto;
+		margin-left: 10px;
+
+}
+	
+	.button {
+
+    height: 60px;
+	width: 60px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    font-size: 20px;
+    color: #333;
+    background-color: #A2F7FF;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+    text-shadow: 0 1px rgba(255,255,255,.4);
+
+}
+	.button:hover {  background-color: #eaeaea;}
+	
+	.operator {color: #fff; background-color: #eebb24;}
+	
+	.erase {
+    background-color: red;
+    border-color: #000;
+    color: #fff;
+    width: 80px;
+    height: 40px;  
+		margin-right: 10px;
+
+}
+	
+	.erase:hover {background-color: #510405;}
+	
+	.equal-sign {
+    background-color: #25a8e0;
+    border-color: #25a8e0;
+    color: #fff;
+}
+
+.equal-sign:hover {background-color: #4e9ed4;}
+	
+	
+	</style>
+
+</head>
+<body>
+
+    <div class="container">
+
+    <br>
+
+    <table>
+
+        <tr>
+
+            <td><input type='text' id='result' class ='display' style="text-align: right;"></td>
+
+			<td style="margin-top: 0px;"><button type='button' value = 'C' onclick="clearScreen()" class="erase"/>C</button></td>
+
+        </tr>
+
+    </table>
+
+    <div class="grid">
+
+    <button type="button" value="7" class="button" onClick="display('7')">7</button>
+
+    <button type="button" value="8" class="button " onClick="display('8')">8</button>
+
+    <button type="button" value="9" class="button" onClick="display('9')">9</button>
+
+    <button type="button" value="/" class="operator" onClick="display('/')">/</button>
+
+    <button type="button" value="4" class="button" onClick="display('4')">4</button>
+
+    <button type="button" value="5" class="button" onClick="display('5')">5</button>
+
+    <button type="button" value="6" class="button" onClick="display('6')">6</button>
+
+    <button type="button" value="*" class="operator" onClick="display('*')">*</button>
+
+    <button type="button" value="1" class="button" onClick="display('1')">1</button>
+
+    <button type="button" value="2" class="button" onClick="display('2')">2</button>
+
+    <button type="button" value="3" class="button" onClick="display('3')">3</button>
+
+    <button type="button" value="-" class="operator" onClick="display('-')">-</button>
+
+    <button type="button" value="0" class="button" onClick="display('0')">0</button>
+
+    <button type="button" value="." class="button" onClick="display('.')">.</button>
+
+    <button type="button" value= "=" class="button equal-sign" onClick="solve()">=</button>
+
+    <button type="button" value="+" class="operator" onClick="display('+')">+</button>
+
+</div> 
+
+</div>
+</body>
+</html>
+
+ 
